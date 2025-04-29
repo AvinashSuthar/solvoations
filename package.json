@@ -24,13 +24,10 @@
     "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9.25.1",
-    "eslint-config-next": "15.3.1",
     "husky": "^7.0.4",
     "lint-staged": "^15.5.1",
     "prettier": "^3.5.3",
@@ -39,7 +36,6 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      
       "prettier --write"
     ]
   }
