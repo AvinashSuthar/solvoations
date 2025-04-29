@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import {
   Navbar,
   NavBody,
@@ -13,15 +13,14 @@ import {
 import { useState } from "react";
 
 export function NavbarR() {
-const navItems = [
-  { name: "Home", link: "#home" },
-  { name: "Services", link: "#services" },
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "#projects" },
-  { name: "FAQs", link: "#faq" },
-  { name: "Contact", link: "#contact" },
-];
-
+  const navItems = [
+    { name: "Home", link: "#home" },
+    { name: "Services", link: "#services" },
+    { name: "About", link: "#about" },
+    { name: "Projects", link: "#projects" },
+    { name: "FAQs", link: "#faq" },
+    { name: "Contact", link: "#contact" },
+  ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 

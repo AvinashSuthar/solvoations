@@ -8,14 +8,16 @@ import { Services } from "@/components/Services";
 
 export default function Home() {
   return (
-    <div className="bg-black">
+    <div className="bg-black flex flex-col justify-center items-center">
       <NavbarR />
       <Hero />
-      <About />
-      <Faq />
-      <Projects />
-      <Services />
-      <Contact/>
+      <div className="max-w-[95%] flex justify-center flex-col items-center">
+        <About />
+        <Faq />
+        <Projects />
+        <Services />
+        <Contact />
+      </div>
     </div>
   );
 }

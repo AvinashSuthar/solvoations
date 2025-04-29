@@ -56,11 +56,15 @@ export function HoverBorderGradient({
     }
   }, [hovered]);
   return (
+    //@ts-ignore
     <Tag
+      //@ts-ignore
       onMouseEnter={(event: React.MouseEvent<HTMLDivElement>) => {
         setHovered(true);
       }}
+      //@ts-ignore
       onMouseLeave={() => setHovered(true)}
+      //@ts-ignore
       className={cn(
         "relative flex rounded-2xl border   bg-black/20 hover:bg-black/10 transition duration-500 dark:bg-gray-100/20 flex-col flex-nowrap gap-10 h-min overflow-visible p-px decoration-clone w-fit",
         containerClassName

@@ -6,80 +6,105 @@ import { cn } from "@/lib/utils";
 
 import { TextArea } from "./ui/textarea";
 import { div } from "motion/react-client";
+import { BiPhone } from "react-icons/bi";
+import { MdEmail } from "react-icons/md";
 
 export function Contact() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");
   };
-    return (
-        <div className="flex justify-center items-center min-h-screen">
-  <div className="flex flex-col justify-center items-center max-w-[90%]">
-            <h1 className="text-6xl font-semibold mb-12">Contact <span className="text-purple-500">Us</span> </h1>
-        <div className="relative inline-flex overflow-hidden rounded-md p-[1px] ">
-          <span
-            className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
-         bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
-          />
-          <span
-            className="inline-flex h-full w-full cursor-pointer items-center 
-        justify-center rounded-md bg-black px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl"
-          >
-            <div
-              id="contact"
-              className="shadow-input bg-black mx-auto w-full max-w-md rounded-none  p-4 md:rounded-2xl md:p-8 dark:bg-black"
-            >
-              <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
-                Welcome to Solvaotions
-              </h2>
-              <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
-                Fill the details and submit the form our team will connect with
-                you in next 24 hours.
-              </p>
-
-              <form className="my-8" onSubmit={handleSubmit}>
-                <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
-                  <LabelInputContainer>
-                    <Label htmlFor="firstname">First name</Label>
-                    <Input id="firstname" placeholder="Tyler" type="text" />
-                  </LabelInputContainer>
-                  <LabelInputContainer>
-                    <Label htmlFor="lastname">Last name</Label>
-                    <Input id="lastname" placeholder="Durden" type="text" />
-                  </LabelInputContainer>
-                </div>
-                <LabelInputContainer className="mb-4">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input
-                    id="email"
-                    placeholder="projectmayhem@fc.com"
-                    type="email"
-                  />
-                </LabelInputContainer>
-                <LabelInputContainer className="mb-4">
-                  <Label htmlFor="text">Your Message</Label>
-                  <TextArea
-                    id="text"
-                    placeholder="Your message"
-                    type="text"
-                    className="h-32"
-                  />
-                </LabelInputContainer>
-
-                <button
-                  className="group/btn relative block h-10 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
-                  type="submit"
-                >
-                  Submit &rarr;
-                  <BottomGradient />
-                </button>
-              </form>
+  return (
+    <div className="flex flex-col justify-center items-center bg-black text-white p-4 w-full">
+      <h1 className="text-6xl font-semibold mb-12">
+        Contact <span className="text-purple-500">Us</span>{" "}
+      </h1>
+      <div className="flex justify-around flex-col md:flex-row lg:flex-row   w-full items-center min-h-screen ">
+        <div className="gap-10 flex flex-col  max-w-[90%]">
+          <h1 className="lg:text-5xl md:text-4xl text-2xl">
+            Get in touch with us
+          </h1>
+          <div className="flex flex-col gap-4">
+            <div>
+              <div className="flex items-center gap-2">
+                <BiPhone />
+                <span className="text-purple-500"> +91 1234567890</span>
+              </div>
             </div>
-          </span>
+            <div>
+              <div className="flex items-center gap-2">
+                <MdEmail />
+                <span className="text-purple-500"> support@Solutions.com</span>
+              </div>
+            </div>
+          </div>
         </div>
-            </div>
-            </div>
-    );
+        <div className="flex flex-col justify-center items-center max-w-[90%]">
+          <div className="relative inline-flex overflow-hidden rounded-md p-[1px] ">
+            <span
+              className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
+         bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]"
+            />
+            <span
+              className="inline-flex h-full w-full cursor-pointer items-center 
+        justify-center rounded-md bg-black px-5 py-2 text-purple backdrop-blur-3xl font-bold text-2xl"
+            >
+              <div
+                id="contact"
+                className="shadow-input bg-black mx-auto w-full max-w-md rounded-none  p-4 md:rounded-2xl md:p-8 dark:bg-black"
+              >
+                <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
+                  Welcome to Solvaotions
+                </h2>
+                <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
+                  Fill the details and submit the form our team will connect
+                  with you in next 24 hours.
+                </p>
+
+                <form className="my-8" onSubmit={handleSubmit}>
+                  <div className="mb-4 flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-2">
+                    <LabelInputContainer>
+                      <Label htmlFor="firstname">First name</Label>
+                      <Input id="firstname" placeholder="Tyler" type="text" />
+                    </LabelInputContainer>
+                    <LabelInputContainer>
+                      <Label htmlFor="lastname">Last name</Label>
+                      <Input id="lastname" placeholder="Durden" type="text" />
+                    </LabelInputContainer>
+                  </div>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="email">Email Address</Label>
+                    <Input
+                      id="email"
+                      placeholder="projectmayhem@fc.com"
+                      type="email"
+                    />
+                  </LabelInputContainer>
+                  <LabelInputContainer className="mb-4">
+                    <Label htmlFor="text">Your Message</Label>
+                    <TextArea
+                      id="text"
+                      placeholder="Your message"
+                      type="text"
+                      className="h-32"
+                    />
+                  </LabelInputContainer>
+
+                  <button
+                    className="group/btn relative block h-10 w-full text-sm rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset] cursor-pointer hover:scale-105 active:scale-95 transition-transform duration-200 ease-in-out"
+                    type="submit"
+                  >
+                    Submit &rarr;
+                    <BottomGradient />
+                  </button>
+                </form>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 const BottomGradient = () => {
