@@ -25,8 +25,7 @@ export const Spotlight = ({
   duration = 7,
   xOffset = 100,
 }: SpotlightProps = {}) => {
-    return (
-      
+  return (
     <motion.div
       initial={{
         opacity: 0,
@@ -38,8 +37,8 @@ export const Spotlight = ({
         duration: 1.5,
       }}
       className="pointer-events-none absolute inset-0 h-full w-full"
-        >
-            hello
+    >
+      hello
       <motion.div
         animate={{
           x: [0, xOffset, 0],
@@ -82,7 +81,6 @@ export const Spotlight = ({
           className={`absolute top-0 left-0 origin-top-left`}
         />
       </motion.div>
-
       <motion.div
         animate={{
           x: [0, -xOffset, 0],

@@ -4,8 +4,8 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 export function About() {
   return (
-      <div
-          id="about"
+    <div
+      id="about"
       className="relative flex h-[50rem]
      w-full justify-center text-center pt-20  bg-white dark:bg-black"
     >
@@ -14,7 +14,7 @@ export function About() {
           "absolute inset-0",
           "[background-size:20px_20px]",
           "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
         )}
       />
       {/* Radial gradient for the container to give a faded look */}

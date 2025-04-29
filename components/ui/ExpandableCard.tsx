@@ -6,7 +6,7 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 
 export function ExpandableCardDemo() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
-    null
+    null,
   );
   const ref = useRef<HTMLDivElement>(null);
   const id = useId();

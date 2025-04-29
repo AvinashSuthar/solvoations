@@ -67,21 +67,21 @@ export function HoverBorderGradient({
       //@ts-ignore
       className={cn(
         "relative flex rounded-2xl border   bg-black/20 hover:bg-black/10 transition duration-500 dark:bg-gray-100/20 flex-col flex-nowrap gap-10 h-min overflow-visible p-px decoration-clone w-fit",
-        containerClassName
+        containerClassName,
       )}
       {...props}
     >
       <div
         className={cn(
           " text-white z-10 bg-black px-4 py-2 rounded-[inherit]",
-          className
+          className,
         )}
       >
         {children}
       </div>
       <motion.div
         className={cn(
-          "flex-none inset-0 overflow-hidden absolute z-0 rounded-[inherit]"
+          "flex-none inset-0 overflow-hidden absolute z-0 rounded-[inherit]",
         )}
         style={{
           filter: "blur(2px)",
