@@ -21,7 +21,7 @@ const Hero = () => {
                 <div className="mt-4 h-6"></div>
 
                 <TextGenerateEffect
-                    className={cn('')}
+                    className={cn('text-2xl font-semibold')}
                     duration={4}
                     filter={false}
                     words="We bring your ideas to life with cutting-edge technology."
