@@ -5,7 +5,7 @@ export function About() {
     return (
         <div
             id="about"
-            className="relative flex h-[50rem] lg:h-[40rem] 
+            className="relative flex h-[70rem] md:h-[55rem] lg:h-[40rem] 
      w-full justify-center text-center pt-20 text-white  bg-white dark:bg-black"
             style={{
                 backgroundImage: "url('/about.jpg')",
