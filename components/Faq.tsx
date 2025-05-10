@@ -1,6 +1,9 @@
 'use client'
-import React, { useState, useRef } from 'react'
-import { HoverBorderGradient } from './ui/Border'
+import React, { useState, useRef, useEffect } from 'react'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css' // You c
+
 import { CardSpotlight } from './ui/card-spotlight'
 
 export function Faq() {
@@ -39,6 +42,30 @@ export function Faq() {
         },
     ]
 
+    useEffect(() => {
+        AOS.init({
+            disable: false,
+            startEvent: 'DOMContentLoaded',
+            initClassName: 'aos-init',
+            animatedClassName: 'aos-animate',
+            useClassNames: false,
+            disableMutationObserver: false,
+            debounceDelay: 50,
+            throttleDelay: 99,
+
+            offset: -500,
+            delay: 0,
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true,
+            anchorPlacement: 'top-top',
+        })
+
+        return () => {
+            AOS.refreshHard() // Clean up AOS animations when leaving the page
+        }
+    }, [])
     return (
         <section className="faq py-12 bg-black  w-full" id="faq">
             <div className="container mx-auto px-4 flex flex-col gap-5 w-full justify-center items-center">
@@ -50,11 +77,12 @@ export function Faq() {
                     <div
                         key={index}
                         className="w-full  max-w-xl sm:max-w-2xl md:max-w-3xl border border-white rounded-lg overflow-hidden"
+                        data-aos="fade-up"
                     >
                         <div className="w-full text-start">
                             <CardSpotlight color={faq.color}>
                                 <div
-                                    className={`question text-base sm:text-lg font-semibold py-4 px-4 sm:px-6 md:px-8 relative cursor-pointer text-white ${
+                                    className={`question text-sm md:text-md lg:text-lg font-semibold py-4 px-4 sm:px-6 md:px-8 relative cursor-pointer text-white ${
                                         activeIndex === index ? 'active' : ''
                                     }`}
                                     onClick={() => handleQuestionClick(index)}

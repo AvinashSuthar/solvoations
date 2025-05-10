@@ -1,7 +1,34 @@
-import { cn } from '@/lib/utils'
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css' // You c
 
 export function About() {
+    useEffect(() => {
+        AOS.init({
+            disable: false,
+            startEvent: 'DOMContentLoaded',
+            initClassName: 'aos-init',
+            animatedClassName: 'aos-animate',
+            useClassNames: false,
+            disableMutationObserver: false,
+            debounceDelay: 20,
+            throttleDelay: 20,
+
+            offset: -500,
+            delay: 0,
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true,
+            anchorPlacement: 'top-top',
+        })
+
+        return () => {
+            AOS.refreshHard() // Clean up AOS animations when leaving the page
+        }
+    }, [])
     return (
         <div
             id="about"
@@ -23,15 +50,21 @@ export function About() {
             /> */}
 
             {/* <div className=" z-[1000] pointer-events-none absolute inset-0 flex bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div> */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center" data-aos="fade-up">
                 <h1 className="text-6xl font-semibold mb-12">
                     About <span className="text-purple-500">Us</span>{' '}
                 </h1>
                 <div className=" grid gap-3 max-w-4xl text-justify px-5">
-                    <h1 className="text-3xl text-white text-center   font-semibold ">
+                    <h1
+                        className="text-3xl text-white text-center   font-semibold "
+                        data-aos="fade-up"
+                    >
                         Your Partner in Digital Growth
                     </h1>
-                    <p className="text-lg lg:text-xl mt-10">
+                    <p
+                        className="text-lg lg:text-xl mt-10"
+                        data-aos="fade-up-left"
+                    >
                         Solvoations is a leading provider of comprehensive
                         digital solutions, specializing in embedded systems,
                         full-stack web and app development. Our mission is to
@@ -41,7 +74,10 @@ export function About() {
                         robust backend systems, we are your trusted partner in
                         driving digital growth and success.
                     </p>
-                    <p className="text-lg lg:text-xl mt-10">
+                    <p
+                        className="text-lg lg:text-xl mt-10"
+                        data-aos="fade-up-right"
+                    >
                         At Solvoations, we pride ourselves on our commitment to
                         excellence and customer satisfaction. Our team of
                         experienced professionals works collaboratively to

@@ -3,11 +3,11 @@ import { socialMedia } from '@/data'
 const Footer = () => {
     return (
         <footer
-            className="w-full lg:mb-0 md:mb-[50px] mb-[100px] pb-10 "
+            className="w-full lg:mb-0 md:mb-[50px] mb-[60px] mt-[100px] md:[mt-10px] lg:[mt-10px] pb-10 "
             id="footer"
         >
-            <div className="flex flex-col md:flex-row mt-16 justify-between items-center text-center md:text-left">
-                <p className="md:text-base text-sm md:font-normal font-light">
+            <div className=" flex flex-col md:flex-row  justify-between items-center text-center md:text-left">
+                <p className="md:text-base my-4   text-sm md:font-normal font-light">
                     Copyright © {new Date().getFullYear()}{' '}
                     <span className="text-purple-400">Solvaotions</span>
                 </p>

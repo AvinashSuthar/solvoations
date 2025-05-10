@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 // Import images
@@ -8,6 +8,9 @@ import project2Image from '../public/images/project-2.png'
 import project5Image from '../public/images/project-5.png'
 import project6Image from '../public/images/project-6.png'
 import project9Image from '../public/images/project-9.png'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css' // You c
 
 // Video paths
 const starComputersVideo = '/videos/star-computers.mp4'
@@ -18,6 +21,31 @@ const weatherVideo = '/videos/weather.mp4'
 
 const Projects = () => {
     const [selectedCategory, setSelectedCategory] = useState('All')
+
+    useEffect(() => {
+        AOS.init({
+            disable: false,
+            startEvent: 'DOMContentLoaded',
+            initClassName: 'aos-init',
+            animatedClassName: 'aos-animate',
+            useClassNames: false,
+            disableMutationObserver: false,
+            debounceDelay: 50,
+            throttleDelay: 99,
+
+            offset: -500,
+            delay: 0,
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true,
+            anchorPlacement: 'top-top',
+        })
+
+        return () => {
+            AOS.refreshHard() // Clean up AOS animations when leaving the page
+        }
+    }, [])
 
     const projects = [
         {
@@ -85,7 +113,7 @@ const Projects = () => {
             className="min-h-screen bg-black px-5 py-10 text-center"
         >
             <h1 className="text-6xl font-semibold mb-12">
-                Contact <span className="text-purple-500">Us</span>{' '}
+                Our <span className="text-purple-500">Projects</span>{' '}
             </h1>
             <div className="mb-8 flex flex-wrap gap-4 justify-center sm:justify-start">
                 {categories.map((cat) => (
@@ -106,6 +134,7 @@ const Projects = () => {
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {filteredProjects.map((p) => (
                     <div
+                        data-aos="zoom-in-up"
                         key={p.id}
                         className="group relative overflow-hidden border border-gray-700 rounded-xl bg-[#181818] transition-transform transform hover:scale-105 shadow-lg"
                     >

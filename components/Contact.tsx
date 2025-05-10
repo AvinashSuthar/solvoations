@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Label } from './ui/label'
 import { Input } from './ui/input'
 import { cn } from '@/lib/utils'
@@ -12,9 +12,35 @@ import { MdEmail } from 'react-icons/md'
 import { WorldMap } from './ui/WorldMap'
 import dynamic from 'next/dynamic'
 import { toast } from 'sonner'
+import AOS from 'aos'
+import 'aos/dist/aos.css' // You c
 
 export function Contact() {
     const [copied, setCopied] = useState(false)
+    useEffect(() => {
+        AOS.init({
+            disable: false,
+            startEvent: 'DOMContentLoaded',
+            initClassName: 'aos-init',
+            animatedClassName: 'aos-animate',
+            useClassNames: false,
+            disableMutationObserver: false,
+            debounceDelay: 20,
+            throttleDelay: 20,
+
+            offset: -500,
+            delay: 0,
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,
+            mirror: true,
+            anchorPlacement: 'top-top',
+        })
+
+        return () => {
+            AOS.refreshHard() // Clean up AOS animations when leaving the page
+        }
+    }, [])
 
     function validateForm() {
         const name = document.getElementById('name') as HTMLInputElement
@@ -121,10 +147,16 @@ export function Contact() {
                 </h1>
                 <div className="flex justify-around flex-col md:flex-row lg:flex-row   w-full items-center min-h-screen ">
                     <div className="gap-10 flex flex-col  max-w-[90%]">
-                        <h1 className="lg:text-5xl md:text-4xl text-2xl">
+                        <h1
+                            data-aos="fade-up"
+                            className="lg:text-5xl md:text-4xl text-2xl"
+                        >
                             Get in touch with us
                         </h1>
-                        <div className="flex flex-col gap-4">
+                        <div
+                            data-aos="fade-up"
+                            className="flex flex-col gap-4 m-3"
+                        >
                             <div>
                                 <div className="flex items-center gap-2">
                                     <BiPhone className="lg:text-2xl md:text-xl text-lg" />
@@ -145,7 +177,10 @@ export function Contact() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-col justify-center items-center max-w-[90%]">
+                    <div
+                        data-aos="fade-up"
+                        className="flex flex-col justify-center items-center max-w-[90%]"
+                    >
                         <div className="relative inline-flex overflow-hidden rounded-md p-[1px] ">
                             <span
                                 className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]
