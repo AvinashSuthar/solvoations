@@ -132,9 +132,10 @@ const Projects = () => {
             </div>
 
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                {filteredProjects.map((p) => (
+                {filteredProjects.map((p, index) => (
                     <div
-                        data-aos="zoom-in-up"
+                        data-aos="fade-up"
+                        data-aos-delay={index * 200}
                         key={p.id}
                         className="group relative overflow-hidden border border-gray-700 rounded-xl bg-[#181818] transition-transform transform hover:scale-105 shadow-lg"
                     >
