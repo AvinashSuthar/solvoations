@@ -58,23 +58,28 @@ export function BookACall() {
 
         setLoading(true)
         emailjs.init('o6FCj7eybSWlzKniL')
-        emailjs.send('service_gy57yxh', 'template_1hohhlv', value).then(
-            () => {
-                toast.success('Message sent successfully')
-                console.log('Message sent successfully')
-                setLoading(false)
-                setValue({
-                    name: null,
-                    startDate: null,
-                    endDate: null,
-                })
-            },
-            () => {
-                toast.error('Message failed to send')
-                console.log('Message failed to send')
-                setLoading(false)
-            },
-        )
+        emailjs
+            .send('service_gy57yxh', 'template_1hohhlv', {
+                email: value.name,
+                message: value.startDate + ' ' + value.endDate,
+            })
+            .then(
+                () => {
+                    toast.success('Message sent successfully')
+                    console.log('Message sent successfully')
+                    setLoading(false)
+                    setValue({
+                        name: null,
+                        startDate: null,
+                        endDate: null,
+                    })
+                },
+                () => {
+                    toast.error('Message failed to send')
+                    console.log('Message failed to send')
+                    setLoading(false)
+                },
+            )
     }
 
     return (
