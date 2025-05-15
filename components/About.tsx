@@ -22,7 +22,7 @@ export function About() {
             easing: 'ease-in-out',
             once: false,
             mirror: true,
-            anchorPlacement: 'top-top',
+            anchorPlacement: 'top-center',
         })
 
         return () => {
@@ -61,7 +61,10 @@ export function About() {
                     >
                         Your Partner in Digital Growth
                     </h1>
-                    <p className="text-lg lg:text-xl mt-10" data-aos="fade-up">
+                    <p
+                        className="text-lg text-neutral-400 lg:text-xl mt-10"
+                        data-aos="fade-up"
+                    >
                         Solvoations is a leading provider of comprehensive
                         digital solutions, specializing in embedded systems,
                         full-stack web and app development. Our mission is to
@@ -71,7 +74,10 @@ export function About() {
                         robust backend systems, we are your trusted partner in
                         driving digital growth and success.
                     </p>
-                    <p className="text-lg lg:text-xl mt-10" data-aos="fade-up">
+                    <p
+                        className="text-lg text-neutral-400 lg:text-xl mt-10"
+                        data-aos="fade-up"
+                    >
                         At Solvoations, we pride ourselves on our commitment to
                         excellence and customer satisfaction. Our team of
                         experienced professionals works collaboratively to
