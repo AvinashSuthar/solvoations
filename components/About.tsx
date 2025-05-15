@@ -65,7 +65,7 @@ export function About() {
                         className="text-lg text-neutral-400 lg:text-xl mt-10"
                         data-aos="fade-up"
                     >
-                        Solvoations is a leading provider of comprehensive
+                        Solvaotions is a leading provider of comprehensive
                         digital solutions, specializing in embedded systems,
                         full-stack web and app development. Our mission is to
                         empower businesses by delivering innovative and scalable
@@ -78,7 +78,7 @@ export function About() {
                         className="text-lg text-neutral-400 lg:text-xl mt-10"
                         data-aos="fade-up"
                     >
-                        At Solvoations, we pride ourselves on our commitment to
+                        At Solvaotions, we pride ourselves on our commitment to
                         excellence and customer satisfaction. Our team of
                         experienced professionals works collaboratively to
                         transform your ideas into reality, leveraging

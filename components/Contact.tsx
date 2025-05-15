@@ -237,7 +237,7 @@ export function Contact() {
                                             <Input
                                                 id="email"
                                                 name="email"
-                                                placeholder="solvaotions@solvoations.tech"
+                                                placeholder="solvaotions@Solvaotions.tech"
                                                 type="email"
                                             />
                                         </LabelInputContainer>

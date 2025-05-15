@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://solvaotions.tech
+
+# Sitemaps
+Sitemap: https://solvaotions.tech/sitemap.xml
