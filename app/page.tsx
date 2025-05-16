@@ -21,9 +21,9 @@ export default function Home() {
                 <Faq />
                 <Projects />
                 <Services />
-                <Contact />
-                <Footer />
             </div>
+            <Contact />
+            <Footer />
             <Toaster />
         </div>
     )

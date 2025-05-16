@@ -3,21 +3,31 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 
 // Import images
-import project1Image from '../public/images/project-1.png'
-import project2Image from '../public/images/project-2.png'
-import project5Image from '../public/images/project-5.png'
-import project6Image from '../public/images/project-6.png'
-import project9Image from '../public/images/project-9.png'
+const project1Image =
+    'https://res.cloudinary.com/dedt8znoc/image/upload/v1747412469/project-1_m5vj80.png'
+const project2Image =
+    'https://res.cloudinary.com/dedt8znoc/image/upload/v1747412470/project-2_djrrh7.png'
+const project5Image =
+    'https://res.cloudinary.com/dedt8znoc/image/upload/v1747412470/project-5_g0kqoa.png'
+const project6Image =
+    'https://res.cloudinary.com/dedt8znoc/image/upload/v1747412470/project-6_ynz1qt.png'
+const project9Image =
+    'https://res.cloudinary.com/dedt8znoc/image/upload/v1747412470/project-9_yrrppj.png'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css' // You c
 
 // Video paths
-const starComputersVideo = '/videos/star-computers.mp4'
-const himflixVideo = '/videos/Himflix.mp4'
-const miniSpotifyVideo = '/videos/Mini-Spotify.mp4'
-const musicaVideo = '/videos/musica.mp4'
-const weatherVideo = '/videos/weather.mp4'
+const starComputersVideo =
+    'https://res.cloudinary.com/dedt8znoc/video/upload/v1747412706/star_computers_khs42s.mp4'
+const himflixVideo =
+    'https://res.cloudinary.com/dedt8znoc/video/upload/v1747412674/Himflix_pbgbzk.mp4'
+const miniSpotifyVideo =
+    'https://res.cloudinary.com/dedt8znoc/video/upload/v1747412733/Mini_Spotify_sxab5h.mp4'
+const musicaVideo =
+    'https://res.cloudinary.com/dedt8znoc/video/upload/v1747412660/musica_ym9sr0.mp4'
+const weatherVideo =
+    'https://res.cloudinary.com/dedt8znoc/video/upload/v1747412645/weather_xhtgkq.mp4'
 
 const Projects = () => {
     const [selectedCategory, setSelectedCategory] = useState('All')
@@ -140,11 +150,12 @@ const Projects = () => {
                         className="group relative overflow-hidden border border-gray-700 rounded-xl bg-[#181818] transition-transform transform hover:scale-105 shadow-lg"
                     >
                         <div className="relative w-full aspect-video">
-                            <Image
+                            <img
+                                width={500}
+                                height={500}
                                 src={p.image}
                                 alt={p.title}
                                 className="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-                                loading="lazy"
                             />
                             <video
                                 src={p.video}

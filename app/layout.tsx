@@ -78,6 +78,10 @@ export default function RootLayout({
                                     'https://www.linkedin.com/in/avinash-suthar-970a56230',
                                     'https://www.instagram.com/avinashsutharr',
                                     'https://x.com/avinash__suthar',
+                                    'https://github.com/Solvoations',
+                                    'https://x.com/solvaotion2025',
+                                    'https://www.linkedin.com/in/solvaotion-tech-927108354',
+                                    'https://www.instagram.com/solvaotion',
                                 ],
                                 contactPoint: {
                                     '@type': 'ContactPoint',
@@ -97,6 +101,10 @@ export default function RootLayout({
                                 'https://www.linkedin.com/in/avinash-suthar-970a56230',
                                 'https://www.instagram.com/avinashsutharr',
                                 'https://x.com/avinash__suthar',
+                                'https://github.com/Solvoations',
+                                'https://x.com/solvaotion2025',
+                                'https://www.linkedin.com/in/solvaotion-tech-927108354',
+                                'https://www.instagram.com/solvaotion',
                             ],
                             jobTitle: 'Software Developer',
                             worksFor: {

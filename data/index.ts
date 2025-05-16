@@ -2,21 +2,21 @@ export const socialMedia = [
     {
         id: 1,
         img: '/git.svg',
-        link: 'github.avinashsuthar.in',
+        link: 'https://github.com/Solvoations',
     },
     {
         id: 2,
         img: '/twit.svg',
-        link: 'x.avinashsuthar.in',
+        link: 'https://x.com/solvaotion2025',
     },
     {
         id: 3,
         img: '/link.svg',
-        link: 'linkedin.avinashsuthar.in',
+        link: 'https://www.linkedin.com/in/solvaotion-tech-927108354',
     },
     {
         id: 4,
         img: '/insta.svg',
-        link: 'insta.avinashsuthar.in',
+        link: 'https://www.instagram.com/solvaotion',
     },
 ]

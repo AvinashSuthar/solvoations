@@ -3,7 +3,7 @@ import { socialMedia } from '@/data'
 const Footer = () => {
     return (
         <footer
-            className="w-full lg:mb-0 md:mb-[50px] mb-[60px] mt-[100px] md:[mt-10px] lg:[mt-10px] pb-10 "
+            className="w-[90%] lg:mb-0 md:mb-[50px] mb-[60px] mt-[100px] md:[mt-10px] lg:[mt-10px] pb-10 "
             id="footer"
         >
             <div className=" flex flex-col md:flex-row  justify-between items-center text-center md:text-left">

@@ -100,52 +100,31 @@ export function Contact() {
         ssr: false,
     })
 
+    // const LazyWorldMap = dynamic(
+    //     () => import('./ui/WorldMap').then((mod) => mod.WorldMap),
+    //     {
+    //         ssr: false, // only render on client
+    //         loading: () => <p>Loading map...</p>,
+    //     },
+    // )
+
     return (
         <div
             id="contact"
             className="relative w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat bg-fixed transition-opacity duration-500 ease-in-out bg"
         >
             <div className="absolute inset-0 z-0 ">
-                <WorldMap
-                    dots={[
-                        {
-                            start: {
-                                lat: 64.2008,
-                                lng: -149.4937,
-                            }, // Alaska (Fairbanks)
-                            end: {
-                                lat: 34.0522,
-                                lng: -118.2437,
-                            }, // Los Angeles
-                        },
-                        {
-                            start: { lat: 64.2008, lng: -149.4937 }, // Alaska (Fairbanks)
-                            end: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
-                        },
-                        {
-                            start: { lat: -15.7975, lng: -47.8919 }, // Brazil (Brasília)
-                            end: { lat: 38.7223, lng: -9.1393 }, // Lisbon
-                        },
-                        {
-                            start: { lat: 51.5074, lng: -0.1278 }, // London
-                            end: { lat: 28.6139, lng: 77.209 }, // New Delhi
-                        },
-                        {
-                            start: { lat: 28.6139, lng: 77.209 }, // New Delhi
-                            end: { lat: 43.1332, lng: 131.9113 }, // Vladivostok
-                        },
-                        {
-                            start: { lat: 28.6139, lng: 77.209 }, // New Delhi
-                            end: { lat: -1.2921, lng: 36.8219 }, // Nairobi
-                        },
-                    ]}
+                <img
+                    src="/world.jpg"
+                    alt="background"
+                    className="w-full h-full object-cover opacity-50"
                 />
             </div>
             <div className="flex flex-col justify-center items-center bg-transparent z-20 text-white p-4 w-full">
                 <h1 className="text-6xl font-semibold mb-12">
                     Contact <span className="text-purple-500">Us</span>{' '}
                 </h1>
-                <div className="flex justify-around flex-col md:flex-row lg:flex-row   w-full items-center min-h-screen ">
+                <div className="flex justify-around flex-col md:flex-row lg:flex-row   w-full items-center min-h-[90%] ">
                     <div className="gap-10 flex flex-col  max-w-[90%]">
                         <h1
                             data-aos="fade-up"
@@ -171,7 +150,7 @@ export function Contact() {
                                     <MdEmail className="lg:text-2xl md:text-xl text-lg" />
                                     <span className="text-purple-500 lg:text-2xl md:text-xl text-lg">
                                         {' '}
-                                        support@solvaotions.com
+                                        solvoations@gmail.com
                                     </span>
                                 </div>
                             </div>
