@@ -10,8 +10,8 @@ import {
     MobileNavToggle,
     MobileNavMenu,
 } from '@/components/ui/Navbar'
-import { useState } from 'react'
-import { PiPhoneCall } from 'react-icons/pi'
+import { useEffect, useRef, useState } from 'react'
+import { gsap } from 'gsap'
 
 export function NavbarR() {
     const navItems = [
@@ -25,8 +25,19 @@ export function NavbarR() {
 
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+    const navbarRef = useRef(null)
+
+    useEffect(() => {
+        const tl = gsap.timeline()
+        tl.from(navbarRef.current, {
+            y: -200,
+            opacity: 0,
+            duration: 1.5,
+            ease: 'bounce.out',
+        })
+    }, [])
     return (
-        <div className=" w-full sticky top-0 z-50 ">
+        <div ref={navbarRef} className=" w-full sticky top-0 z-50 navbar">
             <Navbar>
                 {/* Desktop Navigation */}
                 <NavBody className="">

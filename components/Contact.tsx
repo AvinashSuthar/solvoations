@@ -162,7 +162,7 @@ export function Contact() {
                                     <BiPhone className="lg:text-2xl md:text-xl text-lg" />
                                     <span className="text-purple-500 lg:text-2xl md:text-xl text-lg">
                                         {' '}
-                                        +91 1234567890
+                                        +91 74248 58358
                                     </span>
                                 </div>
                             </div>

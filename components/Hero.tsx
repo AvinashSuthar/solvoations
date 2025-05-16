@@ -16,13 +16,159 @@ const words = [
 
 const Hero = () => {
     useGSAP(() => {
+        // Top Left
         gsap.fromTo(
-            '.hero-text h1',
-            { y: 50, opacity: 0 },
+            '.hero-text h1 .animate-top-left',
+            {
+                y: -250,
+                x: -250,
+                opacity: 0,
+                rotate: -90,
+            },
+            {
+                y: 0,
+                x: 0,
+                opacity: 1,
+                rotate: 0,
+                duration: 1,
+                ease: 'power2.inOut',
+            },
+        )
+
+        // Top Right
+        gsap.fromTo(
+            '.hero-text h1 .animate-top-right',
+            {
+                y: -250,
+                x: 250,
+                opacity: 0,
+                rotate: 90,
+            },
+            {
+                y: 0,
+                x: 0,
+                opacity: 1,
+                rotate: 0,
+                duration: 1,
+                ease: 'power2.inOut',
+            },
+        )
+
+        // Bottom Left
+        gsap.fromTo(
+            '.hero-text h1 .animate-bottom-left',
+            {
+                y: 250,
+                x: -250,
+                opacity: 0,
+                rotate: -90,
+            },
+            {
+                y: 0,
+                x: 0,
+                opacity: 1,
+                rotate: 0,
+                duration: 1,
+                ease: 'power2.inOut',
+            },
+        )
+
+        // Bottom Right
+        gsap.fromTo(
+            '.hero-text h1 .animate-bottom-right',
+            {
+                y: 250,
+                x: 250,
+                opacity: 0,
+                rotate: 90,
+            },
+            {
+                y: 0,
+                x: 0,
+                opacity: 1,
+                rotate: 0,
+                duration: 1,
+                ease: 'power2.inOut',
+            },
+        )
+
+        // Top Center
+        gsap.fromTo(
+            '.hero-text h1 .animate-top-center',
+            {
+                y: -250,
+                opacity: 0,
+                rotate: -45,
+            },
             {
                 y: 0,
                 opacity: 1,
-                stagger: 0.2,
+                rotate: 0,
+                duration: 1,
+                ease: 'power2.inOut',
+            },
+        )
+
+        // Bottom Center
+        gsap.fromTo(
+            '.hero-text h1 .animate-bottom-center',
+            {
+                y: 250,
+                opacity: 0,
+                rotate: 45,
+            },
+            {
+                y: 0,
+                opacity: 1,
+                rotate: 0,
+                duration: 1,
+                ease: 'power2.inOut',
+            },
+        )
+        gsap.fromTo(
+            'div h6  ',
+            {
+                y: 250,
+                opacity: 0,
+            },
+            {
+                y: 0,
+                opacity: 1,
+
+                duration: 1.5,
+                ease: 'power2.inOut',
+            },
+        )
+
+        // Left Center
+        gsap.fromTo(
+            '.hero-text h1 .animate-left-center',
+            {
+                x: -250,
+                opacity: 0,
+                rotate: -45,
+            },
+            {
+                x: 0,
+                opacity: 1,
+                rotate: 0,
+                duration: 1,
+                ease: 'power2.inOut',
+            },
+        )
+
+        // Right Center
+        gsap.fromTo(
+            '.hero-text h1 .animate-right-center',
+            {
+                x: 250,
+                opacity: 0,
+                rotate: 45,
+            },
+            {
+                x: 0,
+                opacity: 1,
+                rotate: 0,
                 duration: 1,
                 ease: 'power2.inOut',
             },
@@ -47,7 +193,9 @@ const Hero = () => {
 
                 <div className="hero-text ">
                     <h1 className="md:-translate-x-1/7 lg:-translate-x-1/7 -translate-x-2/12">
-                        Shaping
+                        <span className="animate-top-left inline-block">
+                            Shaping
+                        </span>
                         <span className="slide">
                             <span className="wrapper">
                                 {words.map((word, index) => (
@@ -66,7 +214,26 @@ const Hero = () => {
                             </span>
                         </span>
                     </h1>
-                    <h1>into Real Projects that Deliver Results</h1>
+                    <h1>
+                        <span className="animate-top-left inline-block">
+                            into&nbsp;
+                        </span>
+                        <span className="animate-top-right inline-block">
+                            Real&nbsp;
+                        </span>
+                        <span className="animate-bottom-left inline-block">
+                            Projects&nbsp;
+                        </span>
+                        <span className="animate-bottom-right inline-block">
+                            that&nbsp;
+                        </span>
+                        <span className="animate-left-center inline-block">
+                            Deliver&nbsp;
+                        </span>
+                        <span className="animate-right-center inline-block">
+                            Results
+                        </span>
+                    </h1>
                 </div>
 
                 <h6 className="text-neutral-400 text-lg  mt-4">
