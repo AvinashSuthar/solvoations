@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-    title: 'Solvaotions - Digital Solutions for Your Business',
+    title: 'Solvaotions - Digital Solutions',
     description:
         'Solvaotions specializes in web development, mobile app development, and embedded system development, providing cutting-edge digital solutions.',
     keywords:
         'Embedded Solutions, Software Developement, digital Agency, solvaotions ,Avinash suthar,  Web Development',
     openGraph: {
-        title: 'Solvaotions - Digital Solutions for Your Business',
+        title: 'Solvaotions - Digital Solutions',
         description:
             'Solvaotions specializes in web development, mobile app development, and embedded system development, providing cutting-edge digital solutions.',
         url: 'https://solvaotions.tech',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Solvaotions - Digital Solutions for Your Business',
+        title: 'Solvaotions - Digital Solutions',
         description:
             'Solvaotions specializes in web development, mobile app development, and embedded system development, providing cutting-edge digital solutions.',
         creator: '@avinashsuthar',
