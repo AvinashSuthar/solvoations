@@ -195,7 +195,7 @@ const CloseIcon = () => {
     const { setOpen } = useModal()
     return (
         <button
-            title="button"
+            title="Close"
             onClick={() => setOpen(false)}
             className="absolute top-4 right-4 group"
         >
@@ -228,11 +228,7 @@ export const CloseButton = ({
 }) => {
     const { setOpen } = useModal()
     return (
-        <button
-            title="button"
-            onClick={() => setOpen(false)}
-            className={className}
-        >
+        <button onClick={() => setOpen(false)} className={className}>
             {children}
         </button>
     )

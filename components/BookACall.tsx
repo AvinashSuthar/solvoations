@@ -142,6 +142,7 @@ export function BookACall() {
                                     Date
                                 </Label>
                                 <Input
+                                    min={new Date().toISOString().split('T')[0]}
                                     title="date"
                                     type="date"
                                     value={value.startDate || ''}
@@ -159,16 +160,39 @@ export function BookACall() {
                                     Time
                                 </Label>
                                 <Input
+                                    min={
+                                        value.startDate ===
+                                        new Date().toISOString().split('T')[0]
+                                            ? new Date()
+                                                  .toTimeString()
+                                                  .slice(0, 5)
+                                            : undefined
+                                    }
                                     value={value.endDate || ''}
                                     title="time"
                                     type="time"
                                     className="bg-gray-950 text-gray-300 border border-gray-700 rounded-md px-3 py-2 focus:outline-none shadow-lg shadow-gray-800"
-                                    onChange={(e) =>
+                                    onChange={(e) => {
+                                        if (
+                                            value.startDate ===
+                                                new Date()
+                                                    .toISOString()
+                                                    .split('T')[0] &&
+                                            e.target.value <
+                                                new Date()
+                                                    .toTimeString()
+                                                    .slice(0, 5)
+                                        ) {
+                                            toast.error(
+                                                'Selected time is in the past',
+                                            )
+                                            return
+                                        }
                                         setValue((prev) => ({
                                             ...prev,
                                             endDate: e.target.value,
                                         }))
-                                    }
+                                    }}
                                 />
                             </div>
                         </div>
