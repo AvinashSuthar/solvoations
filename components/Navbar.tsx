@@ -37,7 +37,7 @@ export function NavbarR() {
         })
     }, [])
     return (
-        <div ref={navbarRef} className=" w-full sticky top-0 z-50 navbar">
+        <div ref={navbarRef} className=" w-full  fixed top-0 z-50 navbar">
             <Navbar>
                 {/* Desktop Navigation */}
                 <NavBody className="">

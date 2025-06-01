@@ -1,4 +1,5 @@
 import { About } from '@/components/About'
+import AnimationController from '@/components/Animations/AnimationController'
 import { Contact } from '@/components/Contact'
 import { Faq } from '@/components/Faq'
 import FeatureCards from '@/components/Features'
@@ -12,9 +13,15 @@ import { Toaster } from '@/components/ui/sonner'
 export default function Home() {
     return (
         <div className="bg-black flex flex-col justify-center items-center">
+            <AnimationController
+                selector=".spring-bottom"
+                animation="spring-bottom"
+            />
+
             <NavbarR />
             <Hero />
             <About />
+
             <div className="max-w-[95%] flex justify-center flex-col items-center">
                 <FeatureCards />
 

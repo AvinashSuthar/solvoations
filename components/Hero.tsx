@@ -126,17 +126,20 @@ const Hero = () => {
             },
         )
         gsap.fromTo(
-            'div h6  ',
+            'div h6  , div button ',
             {
                 y: 250,
                 opacity: 0,
+                delay: 0.5,
+                duration: 1.5,
             },
             {
                 y: 0,
                 opacity: 1,
-
+                delay: 1.5,
                 duration: 1.5,
                 ease: 'power2.inOut',
+                stagger: 0.5,
             },
         )
 

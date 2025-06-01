@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Label } from './ui/label'
 import { Input } from './ui/input'
 import { cn } from '@/lib/utils'
@@ -9,38 +9,12 @@ import { TextArea } from './ui/textarea'
 import emailjs from 'emailjs-com'
 import { BiPhone } from 'react-icons/bi'
 import { MdEmail } from 'react-icons/md'
-import { WorldMap } from './ui/WorldMap'
 import dynamic from 'next/dynamic'
 import { toast } from 'sonner'
-import AOS from 'aos'
-import 'aos/dist/aos.css' // You c
+import AnimationController from './Animations/AnimationController'
 
 export function Contact() {
     const [copied, setCopied] = useState(false)
-    useEffect(() => {
-        AOS.init({
-            disable: false,
-            startEvent: 'DOMContentLoaded',
-            initClassName: 'aos-init',
-            animatedClassName: 'aos-animate',
-            useClassNames: false,
-            disableMutationObserver: false,
-            debounceDelay: 20,
-            throttleDelay: 20,
-
-            offset: -500,
-            delay: 0,
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: false,
-            mirror: true,
-            anchorPlacement: 'top-top',
-        })
-
-        return () => {
-            AOS.refreshHard() // Clean up AOS animations when leaving the page
-        }
-    }, [])
 
     function validateForm() {
         const name = document.getElementById('name') as HTMLInputElement
@@ -100,19 +74,19 @@ export function Contact() {
         ssr: false,
     })
 
-    // const LazyWorldMap = dynamic(
-    //     () => import('./ui/WorldMap').then((mod) => mod.WorldMap),
-    //     {
-    //         ssr: false, // only render on client
-    //         loading: () => <p>Loading map...</p>,
-    //     },
-    // )
-
     return (
         <div
             id="contact"
             className="relative w-full h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat bg-fixed transition-opacity duration-500 ease-in-out bg"
         >
+            <AnimationController
+                selector=".slide-left"
+                animation="slide-left"
+            />
+            <AnimationController
+                selector=".slide-right"
+                animation="slide-right"
+            />
             <div className="absolute inset-0 z-0 ">
                 <img
                     src="/world.jpg"
@@ -125,17 +99,11 @@ export function Contact() {
                     Contact <span className="text-purple-500">Us</span>{' '}
                 </h1>
                 <div className="flex justify-around flex-col md:flex-row lg:flex-row   w-full items-center min-h-[90%] ">
-                    <div className="gap-10 flex flex-col  max-w-[90%]">
-                        <h1
-                            data-aos="fade-up"
-                            className="lg:text-5xl md:text-4xl text-2xl"
-                        >
+                    <div className="gap-10 flex flex-col  max-w-[90%] slide-left">
+                        <h1 className="lg:text-5xl md:text-4xl text-2xl">
                             Get in touch with us
                         </h1>
-                        <div
-                            data-aos="fade-up"
-                            className="flex flex-col gap-4 m-3"
-                        >
+                        <div className="flex flex-col gap-4 m-3">
                             <div>
                                 <div className="flex items-center gap-2">
                                     <BiPhone className="lg:text-2xl md:text-xl text-lg" />
@@ -156,10 +124,7 @@ export function Contact() {
                             </div>
                         </div>
                     </div>
-                    <div
-                        data-aos="fade-up"
-                        className="flex flex-col justify-center items-center max-w-[90%]"
-                    >
+                    <div className="flex flex-col justify-center items-center max-w-[90%] slide-right">
                         <div className="relative inline-flex overflow-hidden rounded-md p-[1px] ">
                             <span
                                 className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]

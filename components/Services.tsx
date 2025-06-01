@@ -16,7 +16,7 @@ export function Services() {
                 Our <span className="text-purple-500">Services</span>{' '}
             </h1>
 
-            <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-8">
+            <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-8 spring-bottom opacity-0">
                 <Card
                     title="Embedded"
                     icon={<AceternityIcon order={<FcElectronics />} />}
