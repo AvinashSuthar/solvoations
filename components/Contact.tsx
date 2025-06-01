@@ -118,7 +118,7 @@ export function Contact() {
                                     <MdEmail className="lg:text-2xl md:text-xl text-lg" />
                                     <span className="text-purple-500 lg:text-2xl md:text-xl text-lg">
                                         {' '}
-                                        solvoations@gmail.com
+                                        solvaotions@gmail.com
                                     </span>
                                 </div>
                             </div>
