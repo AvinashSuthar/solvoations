@@ -14,9 +14,8 @@ const Projects = () => {
             : projects.filter((p) => p.category === selectedCategory)
 
     useGSAP(() => {
-        // Top Left
         gsap.fromTo(
-            '.zoom-in',
+            '.scale-in',
             {
                 scale: 0,
                 opacity: 0,
@@ -24,12 +23,12 @@ const Projects = () => {
             {
                 scale: 1,
                 opacity: 1,
-                duration: 1,
-                stagger: 0.9,
-                ease: 'bounce.out',
+                duration: 0.8,
+                stagger: 0.15,
+                ease: 'power3.out',
             },
         )
-    })
+    }, [filteredProjects])
 
     return (
         <section
