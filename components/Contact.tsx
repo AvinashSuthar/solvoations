@@ -109,7 +109,7 @@ export function Contact() {
                                     <BiPhone className="lg:text-2xl md:text-xl text-lg" />
                                     <span className="text-purple-500 lg:text-2xl md:text-xl text-lg">
                                         {' '}
-                                        +91 74248 58358
+                                        +91 836 802 4592
                                     </span>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@ export function Contact() {
                                     <MdEmail className="lg:text-2xl md:text-xl text-lg" />
                                     <span className="text-purple-500 lg:text-2xl md:text-xl text-lg">
                                         {' '}
-                                        solvaotions@gmail.com
+                                        solvaotions.technologies@gmail.com
                                     </span>
                                 </div>
                             </div>
