@@ -9,6 +9,8 @@ const project6Image =
     'https://res.cloudinary.com/dedt8znoc/image/upload/v1747412470/project-6_ynz1qt.png'
 const project9Image =
     'https://res.cloudinary.com/dedt8znoc/image/upload/v1747412470/project-9_yrrppj.png'
+const project7Image =
+    'https://res.cloudinary.com/dnjiqvkrc/image/upload/v1753581360/WhatsApp_Image_2025-07-02_at_1.38.12_AM_aoblx0.jpg'
 
 // Video paths
 const starComputersVideo =
@@ -111,7 +113,7 @@ export const projects = [
         video: musicaVideo,
         description: 'A Flutter app for music lovers.',
         links: { live: musicaVideo },
-        progress: 'In Progress',
+        progress: 'Completed',
     },
     {
         id: '5',
@@ -138,7 +140,7 @@ export const projects = [
         id: '7',
         title: 'Ropay',
         category: 'Embedded',
-        image: project2Image,
+        image: project7Image,
         description:
             'Designed and developed a smart plug-and-play device for water RO rental systems with subscription-based control. Enabled real-time monitoring and alerts through a mobile app, web dashboard, Wi-Fi, and BLE. Integrated automated features like flow cutoff, diagnostics, and water quality tracking. Delivered a scalable solution that enhanced operational efficiency and improved the customer experience for service providers.',
         links: { live: 'weatherVideo' },
