@@ -11,6 +11,8 @@ const project9Image =
     'https://res.cloudinary.com/dedt8znoc/image/upload/v1747412470/project-9_yrrppj.png'
 const project7Image =
     'https://res.cloudinary.com/dnjiqvkrc/image/upload/v1753581360/WhatsApp_Image_2025-07-02_at_1.38.12_AM_aoblx0.jpg'
+const project8Image =
+    'https://res.cloudinary.com/dnjiqvkrc/image/upload/v1753666772/ota_project_qcrzmh.jpg'
 
 // Video paths
 const starComputersVideo =
@@ -23,6 +25,8 @@ const musicaVideo =
     'https://res.cloudinary.com/dedt8znoc/video/upload/v1747412660/musica_ym9sr0.mp4'
 const weatherVideo =
     'https://res.cloudinary.com/dedt8znoc/video/upload/v1747412645/weather_xhtgkq.mp4'
+const ropayVideo =
+    'https://res.cloudinary.com/dnjiqvkrc/video/upload/v1753666761/ropay_video_ncjcd0.mp4'
 export const socialMedia = [
     {
         id: 1,
@@ -130,7 +134,7 @@ export const projects = [
         id: '6',
         title: 'IOT Firmware OTA update on ESP32 over AWS',
         category: 'Embedded',
-        image: project2Image,
+        image: project8Image,
         description:
             'Developed a secure OTA firmware update system for ESP32 devices with AWS integration for seamless delivery and communication. Credentials and configurations were securely stored onboard. The solution included rollback safety, thorough testing, and clear documentation for reliable and efficient updates.',
         links: { live: 'weatherVideo' },
@@ -141,10 +145,11 @@ export const projects = [
         title: 'Ropay',
         category: 'Embedded',
         image: project7Image,
+        video: ropayVideo,
         description:
             'Designed and developed a smart plug-and-play device for water RO rental systems with subscription-based control. Enabled real-time monitoring and alerts through a mobile app, web dashboard, Wi-Fi, and BLE. Integrated automated features like flow cutoff, diagnostics, and water quality tracking. Delivered a scalable solution that enhanced operational efficiency and improved the customer experience for service providers.',
-        links: { live: 'weatherVideo' },
-        progress: 'Completed',
+        links: { live: ropayVideo },
+        progress: 'In Progress',
     },
 ]
 
