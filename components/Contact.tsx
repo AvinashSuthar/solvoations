@@ -169,7 +169,7 @@ export function Contact() {
                                                 <Input
                                                     id="name"
                                                     name="name"
-                                                    placeholder="Solvaotions"
+                                                    placeholder="Your Name"
                                                     type="text"
                                                 />
                                             </LabelInputContainer>
