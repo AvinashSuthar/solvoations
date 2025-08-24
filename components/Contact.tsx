@@ -118,7 +118,7 @@ export function Contact() {
                                     <MdEmail className="lg:text-2xl md:text-xl text-lg" />
                                     <span className="text-purple-500 lg:text-2xl md:text-xl text-lg">
                                         {' '}
-                                        solvaotions.technologies@gmail.com
+                                        solvonation.tech@gmail.com
                                     </span>
                                 </div>
                             </div>
@@ -149,7 +149,7 @@ export function Contact() {
                                     </div>
 
                                     <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
-                                        Welcome to Solvaotions
+                                        Welcome to Solvonation
                                     </h2>
                                     <p className="mt-2 max-w-sm text-sm text-neutral-600 dark:text-neutral-300">
                                         Fill the details and submit the form our
@@ -181,7 +181,7 @@ export function Contact() {
                                             <Input
                                                 id="email"
                                                 name="email"
-                                                placeholder="solvaotions@Solvaotions.tech"
+                                                placeholder="Your Email"
                                                 type="email"
                                             />
                                         </LabelInputContainer>

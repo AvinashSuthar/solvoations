@@ -15,15 +15,15 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-    title: 'Solvaotions - Digital Solutions',
+    title: 'Solvonation - Digital Solutions',
     description:
-        'Solvaotions specializes in web development, mobile app development, and embedded system development, providing cutting-edge digital solutions.',
+        'Solvonation specializes in web development, mobile app development, and embedded system development, providing cutting-edge digital solutions.',
     keywords:
-        'Embedded Solutions, Software Developement, digital Agency, solvaotions ,Avinash suthar,  Web Development',
+        'Embedded Solutions, Software Developement, digital Agency, solvonation ,Avinash suthar,  Web Development',
     openGraph: {
-        title: 'Solvaotions - Digital Solutions',
+        title: 'Solvonation - Digital Solutions',
         description:
-            'Solvaotions specializes in web development, mobile app development, and embedded system development, providing cutting-edge digital solutions.',
+            'Solvonation specializes in web development, mobile app development, and embedded system development, providing cutting-edge digital solutions.',
         url: 'https://solvaotions.tech',
         siteName: 'Solvaotions',
         locale: 'en_US',
@@ -32,16 +32,16 @@ export const metadata: Metadata = {
                 url: 'https://solvaotions.tech/og-image.jpg',
                 width: 1200,
                 height: 630,
-                alt: 'Solvaotions',
+                alt: 'Solvonation',
             },
         ],
         type: 'website',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Solvaotions - Digital Solutions',
+        title: 'Solvonation - Digital Solutions',
         description:
-            'Solvaotions specializes in web development, mobile app development, and embedded system development, providing cutting-edge digital solutions.',
+            'Solvonation specializes in web development, mobile app development, and embedded system development, providing cutting-edge digital solutions.',
         creator: '@avinashsuthar',
         site: '@avinashsuthar',
         images: ['https://solvaotions.tech/og-image.jpg'],
@@ -109,7 +109,7 @@ export default function RootLayout({
                             jobTitle: 'Software Developer',
                             worksFor: {
                                 '@type': 'Organization',
-                                name: 'Solvaations',
+                                name: 'Solvonation',
                                 url: 'https://solvaotions.tech',
                                 logo: 'https://solvaotions.tech/logo.png',
                             },

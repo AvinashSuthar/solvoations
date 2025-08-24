@@ -240,7 +240,7 @@ export const NavbarLogo = () => {
         >
             <Image src={logo} alt="logo" width={30} height={30} />
             <span className="font-medium text-xl  text-black dark:text-white">
-                Solvaotions
+                Solvonation
             </span>
         </a>
     )
